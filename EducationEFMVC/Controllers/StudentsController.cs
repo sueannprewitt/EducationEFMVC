@@ -7,12 +7,27 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EducationEFMVC.Models;
+using EducationEFMVC.Utility;
 
 namespace EducationEFMVC.Controllers
 {
     public class StudentsController : Controller
     {
         private EducationEFMVCContext db = new EducationEFMVCContext();
+
+        public ActionResult List()
+        {
+            //var students = db.Students.ToList();
+            //foreach (var student in students)
+            //{
+            //    student.Major = db.Majors.Find(student.MajorId);
+            //}
+
+            return new JsonNetResult
+            {
+                Data = db.Students.ToList()
+            };
+        }
 
         public ActionResult Grade(int? id)
         {
