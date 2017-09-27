@@ -7,13 +7,13 @@ namespace EducationEFMVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddedtheMajorclass : IMigrationMetadata
+    public sealed partial class Initialization : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedtheMajorclass));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialization));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709261851129_Added the Major class"; }
+            get { return "201709271550238_Initialization"; }
         }
         
         string IMigrationMetadata.Source

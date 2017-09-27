@@ -154,21 +154,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709181531259_InitialCreate.cs" />
-    <Compile Include="Migrations\201709181531259_InitialCreate.Designer.cs">
-      <DependentUpon>201709181531259_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709181534316_added student.cs" />
-    <Compile Include="Migrations\201709181534316_added student.Designer.cs">
-      <DependentUpon>201709181534316_added student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709181548228_added phone and email to student.cs" />
-    <Compile Include="Migrations\201709181548228_added phone and email to student.Designer.cs">
-      <DependentUpon>201709181548228_added phone and email to student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709261851129_Added the Major class.cs" />
-    <Compile Include="Migrations\201709261851129_Added the Major class.Designer.cs">
-      <DependentUpon>201709261851129_Added the Major class.cs</DependentUpon>
+    <Compile Include="Migrations\201709271550238_Initialization.cs" />
+    <Compile Include="Migrations\201709271550238_Initialization.Designer.cs">
+      <DependentUpon>201709271550238_Initialization.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EducationEFMVCContext.cs" />
@@ -242,17 +230,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709181531259_InitialCreate.resx">
-      <DependentUpon>201709181531259_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709181534316_added student.resx">
-      <DependentUpon>201709181534316_added student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709181548228_added phone and email to student.resx">
-      <DependentUpon>201709181548228_added phone and email to student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709261851129_Added the Major class.resx">
-      <DependentUpon>201709261851129_Added the Major class.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709271550238_Initialization.resx">
+      <DependentUpon>201709271550238_Initialization.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

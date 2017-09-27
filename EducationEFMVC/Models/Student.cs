@@ -15,7 +15,18 @@ namespace EducationEFMVC.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
-        public int MajorId { get; set; }
+        public int? MajorId { get; set; }
+        public Major Major { get; set; }
+
+        public void Copy(Student student)
+        {
+            FirstName = student.FirstName;
+            LastName = student.LastName;
+            SAT = student.SAT;
+            GPA = student.GPA;
+            PhoneNumber = student.PhoneNumber;
+            Email = student.Email;
+        }
 
 
     }
