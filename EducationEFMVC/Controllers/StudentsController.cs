@@ -17,11 +17,11 @@ namespace EducationEFMVC.Controllers
 
         public ActionResult List()
         {
-            //var students = db.Students.ToList();
-            //foreach (var student in students)
-            //{
-            //    student.Major = db.Majors.Find(student.MajorId);
-            //}
+            var students = db.Students.ToList();
+           foreach (var student in students)
+           {
+               student.Major = db.Majors.Find(student.MajorId);
+           }
 
             return new JsonNetResult
             {
@@ -29,6 +29,20 @@ namespace EducationEFMVC.Controllers
             };
         }
 
+        public ActionResult Get(int? id)
+        {
+            if (id == null)
+            {
+                return Json (new Msg { Result = "Failed", Message = "ID is null" }, JsonRequestBehavior.AllowGet);
+            }
+            Student student = db.Students.Find(id);
+            if (student == null)
+            {
+                return Json(new Msg { Result = "Failed", Message = $"Student {id} not found" }, JsonRequestBehavior.AllowGet);
+            }
+           
+            return new JsonNetResult { Data = student };
+        }
         public ActionResult Grade(int? id)
         {
             return View(id);
