@@ -43,6 +43,28 @@ namespace EducationEFMVC.Controllers
            
             return new JsonNetResult { Data = student };
         }
+        public ActionResult Add([Bind(Include = "Id, FirstName, LastName, SAT, GPA, PhoneNumber, Email, MajorId")] Student student)
+        {
+            if(ModelState.IsValid)
+            {
+                db.Students.Add(student);
+                db.SaveChanges();
+                return Json(new Msg { Result = "Success", Message = "Add Successful!" },
+                    JsonRequestBehavior.AllowGet);
+            } else
+            {
+                return Json(new Msg { Result = "Failed", Message = "Model-state dictionary is invalid." },
+                    JsonRequestBehavior.AllowGet);
+            }
+        }
+            
+
+
+
+
+
+
+
         public ActionResult Grade(int? id)
         {
             return View(id);
